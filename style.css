@@ -21,10 +21,12 @@ h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 24px;
   line-height: 2px;
+  text-align: left;
 }
 .card h1 {
   font-size: 45px;
   line-height: 20px;
+  text-align: center;
 }
 p {
   color: hsl(228, 34%, 66%);
@@ -81,6 +83,7 @@ h4 {
   line-height: 0;
   margin-top: -8px;
 }
+/* Toggle for theme change */
 .toggle {
   display: flex;
   justify-content: space-between;
@@ -140,4 +143,36 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.overview h1{
+  margin: 50px 0px 50px 0px;
+}
+.mini-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mini{
+  background-color: hsl(228, 28%, 20%);
+  padding: 15px 35px 0px 30px; 
+  align-items: center;
+  border-radius: 5px;
+  /* height: 150px; */
+}
+.page{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 0;
+}
+.nums{
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;  
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nums h1{
+  font-size: 40px;
 }
