@@ -6,8 +6,19 @@ const head4 = document.getElementsByTagName("h4");
 const head3 = document.getElementsByTagName("h3");
 const bodyElement = document.body;
 
+// Load the saved theme from local Storage
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  setTheme(savedTheme);
+  toggle.checked = savedTheme === "light";
+}
+
 toggle.addEventListener("change", () => {
-  if (toggle.checked) {
+  setTheme(toggle.checked);
+});
+
+function setTheme(pick) {
+  if (pick) {
     bodyElement.className = "light";
     card.forEach((e) => {
       e.classList.add("light");
@@ -18,6 +29,7 @@ toggle.addEventListener("change", () => {
       e.classList.add("light");
       e.children[0].children[0].style.color = "hsl(228, 12%, 44%)";
     });
+    localStorage.setItem("theme", "light");
   } else {
     bodyElement.classList = " ";
     card.forEach((e) => {
@@ -29,7 +41,6 @@ toggle.addEventListener("change", () => {
       e.classList.remove("light");
       e.children[0].children[0].style.color = "hsl(228, 34%, 66%)";
     });
+    localStorage.setItem("theme", "dark");
   }
-});
-// working on toggle to face the correct side during
-// it switch of color and fix the rest of the theme
+}

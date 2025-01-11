@@ -124,10 +124,11 @@ h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, hsl(146, 68%, 55%), hsl(210, 78%, 56%));
+  background: linear-gradient(to left, hsl(146, 68%, 55%), hsl(210, 78%, 56%));
   transition: 0.4s;
   border-radius: 34px;
 }
+
 .slider:before {
   position: absolute;
   content: "";
@@ -148,7 +149,13 @@ input:checked + .slider {
     hsl(230, 22%, 74%)
   );
 }
-
+input:checked + .slider:hover {
+  background-image: linear-gradient(
+    to left,
+    hsl(146, 68%, 55%),
+    hsl(210, 78%, 56%)
+  );
+}
 input:focus + .slider {
   box-shadow: 0 0 1px transparent;
 }
@@ -178,6 +185,8 @@ input:checked + .slider:before {
 .card:hover {
   cursor: pointer;
   background-color: hsl(228, 19%, 37%);
+  transform: scale(0.98);
+  transition: ease-in-out 0.3s;
 }
 .page {
   display: flex;
@@ -214,6 +223,7 @@ p.light {
 .card.light:hover {
   cursor: pointer;
   background-color: hsl(220, 5%, 89%);
+  
 }
 .card h1.light {
   color: var(--Very-Dark-Blue-Text);
