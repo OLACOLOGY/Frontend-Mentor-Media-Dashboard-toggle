@@ -1,9 +1,6 @@
 const toggle = document.getElementById("theme-toggle");
 const card = document.querySelectorAll(".card");
 const miniCard = document.querySelectorAll(".mini");
-const paragraph = document.getElementsByTagName("p");
-const head4 = document.getElementsByTagName("h4");
-const head3 = document.getElementsByTagName("h3");
 const bodyElement = document.body;
 
 // Load the saved theme from local Storage
